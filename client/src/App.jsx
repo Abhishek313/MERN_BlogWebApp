@@ -3,11 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { About,Dashboard,Home,Project,Signin,Signup } from '../src/pages/index.js'
+
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <h1 className='text-3xl text-red-500'>Hello</h1>
+
+    <BrowserRouter>
+     <Routes>
+      <Route path = '/'          element = {<Home/>} />
+      <Route path = '/dashboard' element = {<Dashboard/>} />
+      <Route path = '/about'     element = {<About/>} />
+      <Route path = '/projects'  element = {<Project/>} />
+      <Route path = '/signin'    element = {<Signin/>} />
+      <Route path = '/signup'    element = {<Signup/>} />
+     </Routes> 
+    </BrowserRouter>
+   
   )
 }
 
