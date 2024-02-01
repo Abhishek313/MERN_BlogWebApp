@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { About,Dashboard,Home,Project,Signin,Signup } from '../src/pages/index.js'
+import { About,Dashboard,Home,Project,Signin,Signup,Footer} from '../src/pages/index.js'
 import Header from './components/Header.jsx'
+
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
       <Route path = '/sign-in'    element = {<Signin/>} />
       <Route path = '/sign-up'    element = {<Signup/>} />
      </Routes> 
+     <Footer/>
     </BrowserRouter>
    
   )
